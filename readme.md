@@ -1,12 +1,12 @@
 # Projet_7 Algorithmes
 
-Bonjour et bienvenu dans ce Projet visant a chercher la solution optimisé pour un jeu de donnée
+Bonjour et bienvenue dans ce Projet visant à chercher la solution optimisée pour un jeu de données
 Dans ce projet nopus traiterons d'actions
 
 On a dans un premier temps fait une approche de type bruteforce (test de toutes les combinaisons)
 Puis dans un second temps un algorithme optimisé
 
-Une analyse temporelle du temps d'execution de chaque méthode est aussi implémenté
+Une analyse temporelle du temps d'execution de chaque méthode est aussi implémentée
 
 # Setup environement
 
