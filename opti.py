@@ -23,10 +23,7 @@ def main():
     print("\n\nDataset 2 - Algorithme Sac a dos")
     list_action = getDataExcel("dataset2.csv")
     res = []
-    t1 = time.time()
     profit = sacADos2(list_action,500, res)
-    t2 = time.time()
-    print("Temps execution = " + str(t2 - t1))
     print("Resultat dataSet 2 : \n  Profit = " + str(profit))
     r = 0
     best_set = []
@@ -65,11 +62,6 @@ def sacADos2(tab_action, max_price, final_comb):
                 matrice[index_ligne][index_col] = matrice[index_ligne - 1][index_col]
     index_price = max_price
     index = len(tab_action)
-    for index_l in range(len(tab_action)):
-        chaine = "| "
-        for index_c in range(max_price):
-            chaine += str(matrice[index_l][index_c]) +  " | "
-        print( chaine + "\n")
     r = 0
     while index_price >= 0 and index >= 0:
         action = tab_action[index - 1]
