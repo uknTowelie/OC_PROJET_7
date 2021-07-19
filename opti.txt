@@ -1,0 +1,17 @@
+ALGORITHME optimize(tab_action, max_price)
+VARIABLES
+    resultat : TABLEAU
+    index_action : ENTIER
+    index : ENTIER
+    action : Action
+DEBUT
+    resultat = [0] * (max_price + 1)
+    POUR index_action ALLANT_DE 0 A longueur(tab_action) {PAR_PAS_DE 1}
+        action = tab_action[index_action]
+        POUR index ALLANT_DE max_price A  action.price - 1 {PAR_PAS_DE -1}
+            resultat[index] = max(resultat[index] , resultat[index - action.price] + action.profit() - action.price)
+        FIN_POUR
+    FIN_POUR
+
+    RETOURNE resultat[max_price]
+FIN
